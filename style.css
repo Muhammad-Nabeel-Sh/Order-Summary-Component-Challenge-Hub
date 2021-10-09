@@ -77,10 +77,15 @@ body {
   width: 70%;
   /* align-content: center; */
   align-items: center;
+  align-content: center;
 }
 
 .plan-items {
   font-size: 0.6rem;
+}
+
+.plan-items img {
+  vertical-align: middle;
 }
 
 .annual-plan {
