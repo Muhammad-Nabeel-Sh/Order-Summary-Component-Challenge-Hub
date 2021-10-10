@@ -15,32 +15,35 @@
   </style>
 </head>
 <body>
-  <div id="content-wrapper">
-    <figure id="illustration-hero">
-      <img src="images/illustration-hero.svg" alt="Illustration of a girl listening to music">
-    </figure>
-    <section id="order-summary">
-      <header id="section-header">
-        Order Summary
-      </header>
-      You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
-    </section>
-    <div id="plan-container">
-      <div class="plan-items">
-        <img src="images/icon-music.svg" alt="music icon">
+  <main>
+    <h1>Order summary component challenge hub</h1>
+    <div id="content-wrapper">
+      <figure id="illustration-hero">
+        <img src="images/illustration-hero.svg" alt="Illustration of a girl listening to music">
+      </figure>
+      <section id="order-summary">
+        <header id="section-header">
+          <h2 role="heading">Order Summary</h2>
+        </header>
+        You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+      </section>
+      <div role="group" id="plan-container">
+        <div class="plan-items">
+          <img src="images/icon-music.svg" alt="music icon">
+        </div>
+        <div class="plan-items">
+            <div class="annual-plan">Annual Plan</div>
+            <div class="annual-plan">$59.99/year</div>
+        </div>
+        <div class="plan-items"><a role="button" href="">Change</a></div>
       </div>
-      <div class="plan-items">
-          <div class="annual-plan">Annual Plan</div>
-          <div class="annual-plan">$59.99/year</div>
-      </div>
-      <div class="plan-items"><a href="">Change</a></div>
+      <a role="button" href="" class="pay submit">Proceed to Payment</a>
+      <a role="button" href="" class="cancel submit">Cancel Order</a>
     </div>
-    <a href="" class="pay submit">Proceed to Payment</a>
-    <a href="" class="cancel submit">Cancel Order</a>
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.linkedin.com/in/muhammad-nabil-ibrahim-728b571b8/">Muhammad Nabeel</a>.
-  </div>
+  </main>
+  <footer role="contentinfo" class="attribution">
+    Challenge by <a role="link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a role="link" href="https://www.linkedin.com/in/muhammad-nabil-ibrahim-728b571b8/">Muhammad Nabeel</a>.
+  </footer>
 </body>
 </html>

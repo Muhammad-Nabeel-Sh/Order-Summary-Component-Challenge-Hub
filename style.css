@@ -13,6 +13,8 @@
 * {
   font-family: "Red Hat Display", sans-serif;
   box-sizing: content-box;
+  padding: 0;
+  margin: 0;
 }
 
 html,
@@ -23,20 +25,33 @@ body {
   background: var(--pale-blue) url(images/pattern-background-desktop.svg);
   background-size: cover;
   background-origin: content-box;
-  background-position: bottom;
   background-repeat: no-repeat;
   overflow: visible;
+  color: var(--dark-blue);
 }
 
-#content-wrapper {
+h1 {
+  display: none;
+}
+
+/* #page-wrapper {
   position: relative;
+  display: flex;
+  align-content: center;
+} */
+
+#content-wrapper {
+  position: absolute;
   width: 400px;
   margin-left: auto;
   margin-right: auto;
   /* overflow: hidden; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--very-pale-blue);
   padding: 0;
-  transform: translateY(30%);
+  /* transform: translateY(30%); */
   padding-bottom: 20px;
   border: none;
   border-radius: 20px;
@@ -58,8 +73,8 @@ body {
   width: 70%;
   margin: 0 auto;
   word-wrap: break-word;
-  padding: 50px 15px;
-  text-align: justify;
+  padding: 40px 0;
+  text-align: center;
   font-size: 0.7rem;
   color: var(--desaturated-blue);
 }
@@ -68,8 +83,12 @@ body {
   font-size: 1rem;
   font-weight: 900;
   text-align: center;
-  color: initial;
+  color: var(--dark-blue);
   padding-bottom: 15px;
+}
+h2 {
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 #plan-container {
@@ -95,6 +114,7 @@ body {
   flex-direction: column;
   font-size: 0.7rem;
   padding-left: 20px;
+  color: var(--dark-blue);
 }
 
 .annual-plan:first-of-type {
@@ -125,7 +145,7 @@ a {
   margin: 20px auto;
   padding: 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: transparent;
   font-weight: 700;
   font-size: 0.7rem;
@@ -142,6 +162,7 @@ a {
 
 .cancel {
   color: var(--desaturated-blue);
+  margin-bottom: 0;
 }
 
 .cancel:hover {
@@ -154,7 +175,9 @@ a {
 
 .attribution {
   position: absolute;
+  top: 97%;
   bottom: 15px;
+  margin-bottom: 20px;
   width: 100vw;
   margin-left: auto;
   margin-right: auto;
@@ -178,15 +201,10 @@ a {
 }
 
 @media (max-width: 375px) {
-  #content-wrapper {
-    width: 85vw;
-    transform: translateY(15%);
-  }
-  .plan-items:last-of-type {
-    padding-left: 35px;
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
   }
   #order-summary {
-    text-align: center;
     font-size: 0.6rem;
   }
 }
@@ -219,22 +237,18 @@ a {
   }
 }
 
-@media (max-height: 780px) and (max-width: 375px) {
+@media (max-height: 680px) {
   #content-wrapper {
     position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .attribution {
     position: relative;
-    margin-top: 180px;
-  }
-}
-
-@media (max-height: 880px) and (min-width: 376px) {
-  #content-wrapper {
-    position: relative;
-  }
-  .attribution {
-    position: relative;
-    margin-top: 250px;
+    top: 0;
+    bottom: 0;
   }
 }
