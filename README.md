@@ -67,6 +67,9 @@ Throughout this challenge, I reinforced some frontend skills :
 * Setting a default font size then using relative units `em` and `rem`
 * Listing the color palette and assigning it to CSS variables
 * Making a responsive UI for multiple screen sizes
+* Incorporating accessibility features:
+  * Roles
+  * Landmarks and sectioning elements
 
 ## Author
 
